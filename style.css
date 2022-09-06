@@ -1,0 +1,55 @@
+html {
+  font-family: 'Press Start 2P', cursive;
+}
+
+header, main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#screen-container {
+  background-color: #191a19;
+  width: 300px;
+  min-height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 20px;
+}
+
+#screen {
+  background-color: #0D0208;
+  width: 275px;
+  min-height: 100px;
+  border-radius: 5px;
+  color: #00FF41;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  word-wrap: break-word;
+}
+
+#controls {
+  width: 300px;
+  height: 400px;
+  background-color: #191a19;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 20px;
+}
+
+#operations-value {
+  font-size: 12px;
+}
+
+#results-value {
+  font-size: 20px;
+}
+
+
