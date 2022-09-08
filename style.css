@@ -63,6 +63,8 @@ body {
 
 #results-value {
   font-size: 20px;
+  min-height: 30px;
+  padding-top: 10px;
 }
 
 #buttons {

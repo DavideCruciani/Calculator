@@ -13,43 +13,43 @@ const button8 = document.querySelector("#b8");
 const button9 = document.querySelector("#b9");
 
 button0.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '0';
+  InsertedNumbers.textContent += 0;
 })
 
 button1.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '1';
+  InsertedNumbers.textContent += 1;
 })
 
 button2.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '2';
+  InsertedNumbers.textContent += 2;
 })
 
 button3.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '3';
+  InsertedNumbers.textContent += 3;
 })
 
 button4.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '4';
+  InsertedNumbers.textContent += 4;
 })
 
 button5.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '5';
+  InsertedNumbers.textContent += 5;
 })
 
 button6.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '6';
+  InsertedNumbers.textContent += 6;
 })
 
 button7.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '7';
+  InsertedNumbers.textContent += 7;
 })
 
 button8.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '8';
+  InsertedNumbers.textContent += 8;
 })
 
 button9.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += '9';
+  InsertedNumbers.textContent += 9;
 })
 
 /* associating operator&co buttons with functions */
@@ -61,33 +61,75 @@ const buttonRemainder = document.querySelector("#bRemainder")
 const buttonDot = document.querySelector("#bDot")
 
 buttonPlus.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += " + ";
-  Results += " + ";
+  let last = InsertedNumbers.textContent.charAt(InsertedNumbers.textContent.length - 1);
+  if ( last === '0' || last === '1' || last === '2' ||  last === '3' || last === '4' || last === '5' || last === '6' || last === '7' || last === '8' || last === '9' ) {
+  if (typeof +last === 'number') {
+  InsertedNumbers.textContent += " + ";
+  }
+}
 })
 
 buttonMinus.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += " - ";
+  let last = InsertedNumbers.textContent.charAt(InsertedNumbers.textContent.length - 1);
+  if ( last === '0' || last === '1' || last === '2' ||  last === '3' || last === '4' || last === '5' || last === '6' || last === '7' || last === '8' || last === '9' ) {
+  if (typeof +last === 'number') {
+  InsertedNumbers.textContent += " - ";
+  }
+}
 })
 
 buttonMoltiplicator.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += " × ";
+  let last = InsertedNumbers.textContent.charAt(InsertedNumbers.textContent.length - 1);
+  if ( last === '0' || last === '1' || last === '2' ||  last === '3' || last === '4' || last === '5' || last === '6' || last === '7' || last === '8' || last === '9' ) {
+  if (typeof +last === 'number') {
+  InsertedNumbers.textContent += " × ";
+  }
+}
 })
 
 buttonDivide.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += " ÷ ";
+  let last = InsertedNumbers.textContent.charAt(InsertedNumbers.textContent.length - 1);
+  if ( last === '0' || last === '1' || last === '2' ||  last === '3' || last === '4' || last === '5' || last === '6' || last === '7' || last === '8' || last === '9' ) {
+  if (typeof +last === 'number') {
+  InsertedNumbers.textContent += " ÷ ";
+  }
+}
 })
 
 buttonRemainder.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += " % ";
+  let last = InsertedNumbers.textContent.charAt(InsertedNumbers.textContent.length - 1);
+  if ( last === '0' || last === '1' || last === '2' ||  last === '3' || last === '4' || last === '5' || last === '6' || last === '7' || last === '8' || last === '9' ) {
+  if (typeof +last === 'number') {
+  InsertedNumbers.textContent += " % ";
+  }
+}
 })
 
 buttonDot.addEventListener('click', () => {
-  InsertedNumbers.innerHTML += ".";
+  let last = InsertedNumbers.textContent.charAt(InsertedNumbers.textContent.length - 1);
+  if ( last === '0' || last === '1' || last === '2' ||  last === '3' || last === '4' || last === '5' || last === '6' || last === '7' || last === '8' || last === '9' ) {
+  if (typeof +last === 'number') {
+  InsertedNumbers.textContent += " . ";
+  }
+}
 })
 
-/* creating functions */
+/* equal button */
 
-function equal() {
-  Final = 
-}
+const buttonEqual = document.querySelector("#bEqual")
+const ResultsNumber = document.querySelector("#results-value")
 
+buttonEqual.addEventListener('click', () => {
+  ResultsNumber.textContent = eval(InsertedNumbers.textContent.replace(/÷/g, "/").replace(/×/g, "*"));
+})
+
+/* AC button */
+
+const buttonAC = document.querySelector("#bAC")
+
+buttonAC.addEventListener('click', () => {
+  InsertedNumbers.textContent = "";
+  ResultsNumber.textContent = "";
+})
+
+/* C button */
