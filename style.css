@@ -93,8 +93,8 @@ button:active {
   scale: 0.9;
 }
 
-#equal {
-  grid-column: 3 / 5;
+#bEqual {
+  grid-column: 5 / 3;
   border-radius: 50px;
 }
 
